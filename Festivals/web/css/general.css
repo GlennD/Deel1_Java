@@ -8,7 +8,6 @@ body {
   position:relative;
 }
 
-
 /* ** ** Common Addative Classes ** ** */
 .left, .float_left  { float:left	}
 .right, .float_right { float:right	}
@@ -89,5 +88,95 @@ pre, code, tt   {	font:1em 'andale mono', 'lucida console', monospace;line-heigh
 code 			{	background-color:#eee; display:inline; padding:0px 2px 1px 2px; line-height:1.1em;}
 pre 			{	margin:1.5em 0;white-space:pre;}
 
+header {padding-top:25px; border-bottom:1px solid #ccc; padding-bottom:20px;}
+header .logo {font-size:3.52em;}
+header nav ul li {float:left; margin-top:12px;}
+header nav ul li a {display:block; padding:5px 15px; border-right:1px solid #eee; font-size:1.52em; font-family:Georgia, "Times New Roman", Times, serif; text-decoration:none;}
+header nav ul li a:hover {background-color:#eee; border-right:1px solid #ccc; text-shadow:-1px -1px 0px #fff;}
+header nav ul li.last a {border-right:none;}
 
+#styled {margin-top:20px;}
 
+.group {padding:5px; background-color:#eee; border:1px dashed #ccc; list-style:none; margin:0px; margin-bottom:5px;}
+.group a {font-size:1.2em;}
+.group p {margin-bottom:5px;}
+.group li {margin-bottom:5px;}
+	
+#css3 div > div {margin:0px 0px 50px 0px; padding:6px; border:1px solid #eee;}
+#grid div {text-align:center;  }
+#grid div > .col {border-bottom:1px solid #ccc; padding:10px 0px; outline:1px solid #eee;}
+		
+h2 {border-bottom:1px dashed #ccc; margin-top:15px;}
+	
+.documentation {display:block; background-color:#eee; padding:6px 13px; font-family:Georgia, "Times New Roman", Times, serif; color:#666; text-align:right; text-shadow:-1px -1px 0px #fff;}
+		
+footer {text-align:center; color:#666; font-size:0.9em; padding:4px 0px;}
+		
+.report_bugs {
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	position: absolute;
+	left:-45px;
+	top:200px;
+	background-color:#f00;
+	color:#fff;
+	z-index:99;
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+        text-decoration:none;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:1.2em;
+	padding:2px 5px;
+		}
+
+/* Own customized CSS */  
+#button_main{
+    height: 460px;
+    background-color: #1f9ad3;
+}
+
+#clear_10 {
+    height: 10px; 
+}
+
+#clear_20 {
+    height: 20px; 
+}
+
+#clear_30 {
+    height: 30px; 
+}
+
+#clear_50 {
+    height: 50px; 
+}
+
+#clear_75 {
+    height: 75px; 
+}
+
+#clear_100 {
+    height: 100px; 
+}
+
+#clear_150 {
+    height: 100px; 
+}
+
+#clear_200 {
+    height: 200px; 
+}
+
+#titel_main{
+    text-align: center;
+}
+
+#btn_main{
+    margin-left: 80px;
+}
+
+/* Slider */
+.slider-wrapper { 
+	width: 70%; 
+	margin: 100px auto;
+}
