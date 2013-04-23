@@ -1,0 +1,39 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package login;
+
+import java.util.Iterator;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+/**
+ *
+ * @author Ruben
+ */
+public class loginManager {
+
+    private Session session;
+    private int count = 0;
+
+    public boolean isValidLogin(String uname, String pass) {
+
+        SessionFactory factory = new Configuration().configure().buildSessionFactory();
+        session = factory.openSession();
+        
+        String query = "select gebrEmail, gebrWachtwoord from Geregistreerdegebruikers as reg where gebrEmail IN (:unameandpass) and gebrWachtwoord in (:unameandpass)";
+        Query DBquery = session.createQuery(query).setParameterList("unameandpass", new String[]{uname, pass});
+        for (Iterator it = DBquery.iterate(); it.hasNext();) {            it.next();
+            count++;
+        }
+        System.out.println("Total rows: " + count);
+        if (count == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
