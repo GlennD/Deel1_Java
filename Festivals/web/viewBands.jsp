@@ -38,12 +38,11 @@
     </head>
     <body>
    
+         <a href="index.jsp"><img style="width: 100px; position: absolute; top: -50px;" src="images/Home-Button.png" /></a>
+        <a HREF="javascript:javascript:history.go(-1)"><img style="width: 100px; position: absolute; top: 55px; left: 5px; opacity: 0.4;" src="images/back-button.png" /></a>
+        <a href="viewFestivals.jsp"><img style="width: 150px; left: -20px; position: absolute; top: 100px; opacity: 0.5;" src="images/festivallogo.png" /></a>
+        <a href="viewBands.jsp"><img style="width: 100px; position: absolute; top: 210px; opacity: 0.5;" src="images/microphone.png" /></a>
+        
 
-
-
-        
-        
-        
-        
     </body>
 </html>
