@@ -1,5 +1,5 @@
 package festivalOverview;
-// Generated 21-apr-2013 16:18:54 by Hibernate Tools 3.2.1.GA
+// Generated 21-apr-2013 15:06:18 by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -14,7 +14,7 @@ public class Faciliteiten  implements java.io.Serializable {
      private Integer facId;
      private String facOmschr;
      private Double facEenhprijs;
-     private Set facpercamps = new HashSet(0);
+     private Set<Facpercamp> facpercamps = new HashSet<Facpercamp>(0);
 
     public Faciliteiten() {
     }
@@ -23,7 +23,7 @@ public class Faciliteiten  implements java.io.Serializable {
     public Faciliteiten(String facOmschr) {
         this.facOmschr = facOmschr;
     }
-    public Faciliteiten(String facOmschr, Double facEenhprijs, Set facpercamps) {
+    public Faciliteiten(String facOmschr, Double facEenhprijs, Set<Facpercamp> facpercamps) {
        this.facOmschr = facOmschr;
        this.facEenhprijs = facEenhprijs;
        this.facpercamps = facpercamps;
@@ -50,11 +50,11 @@ public class Faciliteiten  implements java.io.Serializable {
     public void setFacEenhprijs(Double facEenhprijs) {
         this.facEenhprijs = facEenhprijs;
     }
-    public Set getFacpercamps() {
+    public Set<Facpercamp> getFacpercamps() {
         return this.facpercamps;
     }
     
-    public void setFacpercamps(Set facpercamps) {
+    public void setFacpercamps(Set<Facpercamp> facpercamps) {
         this.facpercamps = facpercamps;
     }
 

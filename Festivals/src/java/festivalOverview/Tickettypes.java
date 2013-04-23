@@ -1,5 +1,5 @@
 package festivalOverview;
-// Generated 21-apr-2013 16:18:54 by Hibernate Tools 3.2.1.GA
+// Generated 21-apr-2013 15:06:18 by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -14,8 +14,8 @@ public class Tickettypes  implements java.io.Serializable {
      private Integer typId;
      private String typOmschr;
      private double typPrijs;
-     private Set tickettypesperfestivals = new HashSet(0);
-     private Set ticketses = new HashSet(0);
+     private Set<Tickettypesperfestival> tickettypesperfestivals = new HashSet<Tickettypesperfestival>(0);
+     private Set<Tickets> ticketses = new HashSet<Tickets>(0);
 
     public Tickettypes() {
     }
@@ -25,7 +25,7 @@ public class Tickettypes  implements java.io.Serializable {
         this.typOmschr = typOmschr;
         this.typPrijs = typPrijs;
     }
-    public Tickettypes(String typOmschr, double typPrijs, Set tickettypesperfestivals, Set ticketses) {
+    public Tickettypes(String typOmschr, double typPrijs, Set<Tickettypesperfestival> tickettypesperfestivals, Set<Tickets> ticketses) {
        this.typOmschr = typOmschr;
        this.typPrijs = typPrijs;
        this.tickettypesperfestivals = tickettypesperfestivals;
@@ -53,18 +53,18 @@ public class Tickettypes  implements java.io.Serializable {
     public void setTypPrijs(double typPrijs) {
         this.typPrijs = typPrijs;
     }
-    public Set getTickettypesperfestivals() {
+    public Set<Tickettypesperfestival> getTickettypesperfestivals() {
         return this.tickettypesperfestivals;
     }
     
-    public void setTickettypesperfestivals(Set tickettypesperfestivals) {
+    public void setTickettypesperfestivals(Set<Tickettypesperfestival> tickettypesperfestivals) {
         this.tickettypesperfestivals = tickettypesperfestivals;
     }
-    public Set getTicketses() {
+    public Set<Tickets> getTicketses() {
         return this.ticketses;
     }
     
-    public void setTicketses(Set ticketses) {
+    public void setTicketses(Set<Tickets> ticketses) {
         this.ticketses = ticketses;
     }
 

@@ -1,5 +1,5 @@
 package festivalOverview;
-// Generated 21-apr-2013 16:18:54 by Hibernate Tools 3.2.1.GA
+// Generated 21-apr-2013 15:06:18 by Hibernate Tools 3.2.1.GA
 
 
 import java.util.Date;
@@ -16,27 +16,21 @@ public class Geregistreerdegebruikers  implements java.io.Serializable {
      private String gebrNaam;
      private String gebrAdres;
      private Date gebrGebDat;
-     private String gebrWachtwoord;
-     private String gebrEmail;
-     private Set ticketses = new HashSet(0);
+     private Set<Tickets> ticketses = new HashSet<Tickets>(0);
 
     public Geregistreerdegebruikers() {
     }
 
 	
-    public Geregistreerdegebruikers(String gebrNaam, String gebrAdres, Date gebrGebDat, String gebrWachtwoord, String gebrEmail) {
+    public Geregistreerdegebruikers(String gebrNaam, String gebrAdres, Date gebrGebDat) {
         this.gebrNaam = gebrNaam;
         this.gebrAdres = gebrAdres;
         this.gebrGebDat = gebrGebDat;
-        this.gebrWachtwoord = gebrWachtwoord;
-        this.gebrEmail = gebrEmail;
     }
-    public Geregistreerdegebruikers(String gebrNaam, String gebrAdres, Date gebrGebDat, String gebrWachtwoord, String gebrEmail, Set ticketses) {
+    public Geregistreerdegebruikers(String gebrNaam, String gebrAdres, Date gebrGebDat, Set<Tickets> ticketses) {
        this.gebrNaam = gebrNaam;
        this.gebrAdres = gebrAdres;
        this.gebrGebDat = gebrGebDat;
-       this.gebrWachtwoord = gebrWachtwoord;
-       this.gebrEmail = gebrEmail;
        this.ticketses = ticketses;
     }
    
@@ -68,25 +62,11 @@ public class Geregistreerdegebruikers  implements java.io.Serializable {
     public void setGebrGebDat(Date gebrGebDat) {
         this.gebrGebDat = gebrGebDat;
     }
-    public String getGebrWachtwoord() {
-        return this.gebrWachtwoord;
-    }
-    
-    public void setGebrWachtwoord(String gebrWachtwoord) {
-        this.gebrWachtwoord = gebrWachtwoord;
-    }
-    public String getGebrEmail() {
-        return this.gebrEmail;
-    }
-    
-    public void setGebrEmail(String gebrEmail) {
-        this.gebrEmail = gebrEmail;
-    }
-    public Set getTicketses() {
+    public Set<Tickets> getTicketses() {
         return this.ticketses;
     }
     
-    public void setTicketses(Set ticketses) {
+    public void setTicketses(Set<Tickets> ticketses) {
         this.ticketses = ticketses;
     }
 

@@ -1,5 +1,5 @@
 package festivalOverview;
-// Generated 21-apr-2013 16:18:54 by Hibernate Tools 3.2.1.GA
+// Generated 21-apr-2013 15:06:18 by Hibernate Tools 3.2.1.GA
 
 
 import java.util.Date;
@@ -17,10 +17,10 @@ public class Festivals  implements java.io.Serializable {
      private String festLocatie;
      private Date festDatum;
      private byte festDuur;
-     private Set ticketses = new HashSet(0);
-     private Set bandsperfestivals = new HashSet(0);
-     private Set campingses = new HashSet(0);
-     private Set tickettypesperfestivals = new HashSet(0);
+     private Set<Tickets> ticketses = new HashSet<Tickets>(0);
+     private Set<Bandsperfestival> bandsperfestivals = new HashSet<Bandsperfestival>(0);
+     private Set<Campings> campingses = new HashSet<Campings>(0);
+     private Set<Tickettypesperfestival> tickettypesperfestivals = new HashSet<Tickettypesperfestival>(0);
 
     public Festivals() {
     }
@@ -32,7 +32,7 @@ public class Festivals  implements java.io.Serializable {
         this.festDatum = festDatum;
         this.festDuur = festDuur;
     }
-    public Festivals(String festNaam, String festLocatie, Date festDatum, byte festDuur, Set ticketses, Set bandsperfestivals, Set campingses, Set tickettypesperfestivals) {
+    public Festivals(String festNaam, String festLocatie, Date festDatum, byte festDuur, Set<Tickets> ticketses, Set<Bandsperfestival> bandsperfestivals, Set<Campings> campingses, Set<Tickettypesperfestival> tickettypesperfestivals) {
        this.festNaam = festNaam;
        this.festLocatie = festLocatie;
        this.festDatum = festDatum;
@@ -78,32 +78,32 @@ public class Festivals  implements java.io.Serializable {
     public void setFestDuur(byte festDuur) {
         this.festDuur = festDuur;
     }
-    public Set getTicketses() {
+    public Set<Tickets> getTicketses() {
         return this.ticketses;
     }
     
-    public void setTicketses(Set ticketses) {
+    public void setTicketses(Set<Tickets> ticketses) {
         this.ticketses = ticketses;
     }
-    public Set getBandsperfestivals() {
+    public Set<Bandsperfestival> getBandsperfestivals() {
         return this.bandsperfestivals;
     }
     
-    public void setBandsperfestivals(Set bandsperfestivals) {
+    public void setBandsperfestivals(Set<Bandsperfestival> bandsperfestivals) {
         this.bandsperfestivals = bandsperfestivals;
     }
-    public Set getCampingses() {
+    public Set<Campings> getCampingses() {
         return this.campingses;
     }
     
-    public void setCampingses(Set campingses) {
+    public void setCampingses(Set<Campings> campingses) {
         this.campingses = campingses;
     }
-    public Set getTickettypesperfestivals() {
+    public Set<Tickettypesperfestival> getTickettypesperfestivals() {
         return this.tickettypesperfestivals;
     }
     
-    public void setTickettypesperfestivals(Set tickettypesperfestivals) {
+    public void setTickettypesperfestivals(Set<Tickettypesperfestival> tickettypesperfestivals) {
         this.tickettypesperfestivals = tickettypesperfestivals;
     }
 

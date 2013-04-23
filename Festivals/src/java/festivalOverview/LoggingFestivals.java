@@ -1,5 +1,5 @@
 package festivalOverview;
-// Generated 21-apr-2013 14:34:03 by Hibernate Tools 3.2.1.GA
+// Generated 21-apr-2013 15:06:18 by Hibernate Tools 3.2.1.GA
 
 
 import java.util.Date;

@@ -1,5 +1,5 @@
 package festivalOverview;
-// Generated 21-apr-2013 16:18:54 by Hibernate Tools 3.2.1.GA
+// Generated 21-apr-2013 15:06:18 by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -14,7 +14,7 @@ public class Podia  implements java.io.Serializable {
      private Integer podId;
      private String podOmschr;
      private String podLocatie;
-     private Set bandsperfestivals = new HashSet(0);
+     private Set<Bandsperfestival> bandsperfestivals = new HashSet<Bandsperfestival>(0);
 
     public Podia() {
     }
@@ -24,7 +24,7 @@ public class Podia  implements java.io.Serializable {
         this.podOmschr = podOmschr;
         this.podLocatie = podLocatie;
     }
-    public Podia(String podOmschr, String podLocatie, Set bandsperfestivals) {
+    public Podia(String podOmschr, String podLocatie, Set<Bandsperfestival> bandsperfestivals) {
        this.podOmschr = podOmschr;
        this.podLocatie = podLocatie;
        this.bandsperfestivals = bandsperfestivals;
@@ -51,11 +51,11 @@ public class Podia  implements java.io.Serializable {
     public void setPodLocatie(String podLocatie) {
         this.podLocatie = podLocatie;
     }
-    public Set getBandsperfestivals() {
+    public Set<Bandsperfestival> getBandsperfestivals() {
         return this.bandsperfestivals;
     }
     
-    public void setBandsperfestivals(Set bandsperfestivals) {
+    public void setBandsperfestivals(Set<Bandsperfestival> bandsperfestivals) {
         this.bandsperfestivals = bandsperfestivals;
     }
 

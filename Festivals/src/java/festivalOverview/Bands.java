@@ -1,5 +1,5 @@
 package festivalOverview;
-// Generated 21-apr-2013 16:18:54 by Hibernate Tools 3.2.1.GA
+// Generated 21-apr-2013 15:06:18 by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -15,7 +15,7 @@ public class Bands  implements java.io.Serializable {
      private String bandNaam;
      private String bandSoortMuziek;
      private String bandUrl;
-     private Set bandsperfestivals = new HashSet(0);
+     private Set<Bandsperfestival> bandsperfestivals = new HashSet<Bandsperfestival>(0);
 
     public Bands() {
     }
@@ -26,7 +26,7 @@ public class Bands  implements java.io.Serializable {
         this.bandSoortMuziek = bandSoortMuziek;
         this.bandUrl = bandUrl;
     }
-    public Bands(String bandNaam, String bandSoortMuziek, String bandUrl, Set bandsperfestivals) {
+    public Bands(String bandNaam, String bandSoortMuziek, String bandUrl, Set<Bandsperfestival> bandsperfestivals) {
        this.bandNaam = bandNaam;
        this.bandSoortMuziek = bandSoortMuziek;
        this.bandUrl = bandUrl;
@@ -61,11 +61,11 @@ public class Bands  implements java.io.Serializable {
     public void setBandUrl(String bandUrl) {
         this.bandUrl = bandUrl;
     }
-    public Set getBandsperfestivals() {
+    public Set<Bandsperfestival> getBandsperfestivals() {
         return this.bandsperfestivals;
     }
     
-    public void setBandsperfestivals(Set bandsperfestivals) {
+    public void setBandsperfestivals(Set<Bandsperfestival> bandsperfestivals) {
         this.bandsperfestivals = bandsperfestivals;
     }
 

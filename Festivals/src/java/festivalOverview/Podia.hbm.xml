@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 21-apr-2013 16:18:55 by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 21-apr-2013 15:06:18 by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="festivalOverview.Podia" table="podia" catalog="groep11_festivals">
         <id name="podId" type="java.lang.Integer">
