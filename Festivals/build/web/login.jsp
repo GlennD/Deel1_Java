@@ -17,8 +17,7 @@
     <link rel="stylesheet" type="text/css" href="css/css3.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/custom.css" media="screen" />
     
-    <style>
-        
+    <style>   
         body
         {
             background-color: #f2f2f2;
@@ -26,24 +25,21 @@
     </style>
     
     </head>
-   
-    <body>
-        
+    <body>        
             <div class="col_8 box_shadow rounded" style="margin-left: 34%; margin-top: 15%; background-color: #00ADEF;">
-                <h1><center>LOGIN PAGE</center> </h1>
+                <center><h1>LOGIN PAGE</h1></center>
                 <form method="POST" action="${pageContext.request.contextPath}/loginServlet">
-
-                    <table border="0" align="center">
+                    <table align="center">
                         <thead>
                             <tr>
-                                <th>Email :</th>
-                                <th><input name="uname" type="email" id="email" required="required" class="box_shadow" /></th>
+                                <th><label for="username">Username :</label></th>
+                                <th><input name="uname" type="email" id="username" required="required" class="box_shadow" /></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Password :</td>
-                                <td><input type="password" name="pass" id="email" required="required" class="box_shadow" value="" /></td>
+                                <td><label for="password">Password :</label></td>
+                                <td><input type="password" name="pass" id="password" required="required" class="box_shadow" value="" /></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -51,7 +47,6 @@
                             </tr>
                         </tbody>
                     </table>
-
                 </form>
             </div>
                 

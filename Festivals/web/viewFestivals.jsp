@@ -105,7 +105,7 @@ System.out.println(totalRows);
 
 
     <section class="row" id="styled" style="margin-top: 4em; ">
-        <div style="position: absolute; z-index: 30;"> <span class="rotateTitle"><h1 style="font-family: Rockwell extra bold; position: absolute; background-color: white; left: 50px;  width: 410px; top: 50px;">Select your festival</h1></span>
+        <div style="position: absolute; z-index: 30;"> <span class="rotateTitle"><h1 style="font-family: Rockwell extra bold; position: absolute; background-color: white; left: 50px;  width: 500px; top: 50px;">Select your festival</h1></span>
         </div>
         <div id='coin-slider' style="margin: auto; opacity: 0.8; position: absolute;">
 	<a href="img01_url" target="_blank">
@@ -157,17 +157,19 @@ while(rs1.next()){
     
        <a href="festivaldetails/festivalDetailHome.jsp?festivalID=<%= rs1.getInt("fest_id") %>" style="text-decoration: none; ">
         <%  if (count%2 == 0) {
-        
-        %>
-        <table class="oneFestival"  >
-         <%  
-        }
-        
-        else{
-        %>
-        <table class="oneFestival" style="background-color: #B8CFFF;" >
-            <%
-            } %>
+
+            %>
+            <div class="col_13 col" style="margin-left: 10%;border-top: 7px dashed #fff; border-bottom: 7px dashed #efefef;  border-radius: 20px;">
+            <table class="oneFestival" >
+            <%  
+            }
+            else{
+            %>
+            <div class="col_13 col" style="border-top: 7px dashed #cfcfcf; border-bottom: 7px dashed #bfbfbf; border-radius: 20px;">
+            <table class="oneFestival">
+            <%  
+            }
+            %>
         
         
              <tr style="border: 0px solid black; "><th colspan="2" style="text-align: left; padding: 10px 50px 0px 10px;"><h1 style="font-family: algerian;"><%=rs1.getString("fest_naam")%></h1> </th></tr>

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 21-apr-2013 14:34:03 by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 21-apr-2013 15:06:18 by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="festivalOverview.LoggingFestivals" table="logging_festivals" catalog="groep11_festivals">
-        <id name="festLoggingId" type="int">
+        <id name="festLoggingId" type="java.lang.Integer">
             <column name="fest_logging_id" />
             <generator class="identity" />
         </id>

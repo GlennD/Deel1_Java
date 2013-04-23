@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 21-apr-2013 16:18:55 by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 21-apr-2013 15:06:18 by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="festivalOverview.Festivals" table="festivals" catalog="groep11_festivals">
         <id name="festId" type="java.lang.Integer">
@@ -32,14 +32,7 @@
             </key>
             <one-to-many class="festivalOverview.Bandsperfestival" />
         </set>
-        <set name="campingses" inverse="false" table="campingsperfestival">
-            <key>
-                <column name="fest_id" not-null="true" />
-            </key>
-            <many-to-many entity-name="festivalOverview.Campings">
-                <column name="camp_id" not-null="true" />
-            </many-to-many>
-        </set>
+       
         <set name="tickettypesperfestivals" inverse="true">
             <key>
                 <column name="fest_id" not-null="true" />

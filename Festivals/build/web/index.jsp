@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Festival App Project</title>
     
     <script src="js/modernizr-1.7.min.js"></script><!-- this is the javascript allowing html5 to run in older browsers -->
@@ -29,35 +29,35 @@
 <script type="text/javascript" src="coin-slider/coin-slider.min.js"></script>
 <link rel="stylesheet" href="coin-slider/coin-slider-styles.css" type="text/css" />
 
-
-    <style>
-      
-    </style>
     </head>
     
     
 
 <body>
+      <!-- <a href="index.jsp"><img style="width: 100px; position: absolute; top: -50px;" src="images/Home-Button.png" /></a>
+        <a HREF="javascript:javascript:history.go(-1)"><img style="width: 100px; position: absolute; top: 55px; left: 5px; opacity: 0.4;" src="images/back-button.png" /></a>
+        <a href="viewFestivals.jsp"><img style="width: 150px; left: -20px; position: absolute; top: 100px; opacity: 0.5;" src="images/festivallogo.png" /></a>
+        <a href="viewBands.jsp"><img style="width: 100px; position: absolute; top: 210px; opacity: 0.5;" src="images/microphone.png" /></a>
+        
+-->
 
 
 
-<!-- this section shows you most of the styled elements from the general stylesheet -->
 
-
-
-<section class="row" id="styled" style="margin-top: 4em;">
+<section class="row" id="styled">
+    <div class="title" >Welcome to Festify</div>
     <div class="col_6 col" style="margin-left: 10%;">
-        <button onclick="location.href = 'viewFestivals.jsp'" class="mainButton"><a href="viewFestivals.jsp"><img style="position: absolute; left: -180px; top: -67px; width: 400px; opacity: 0.3;"  src="images/festivallogo.png" /><h1 class="fontface">Festivals</h1></a></button>
+        <button onclick="location.href = 'viewFestivals.jsp'" class="mainButton"><a href="viewFestivals.jsp"><img style="position: absolute; left: -180px; top: -67px; width: 400px; opacity: 0.3; "  src="images/festivallogo.png" alt="sliderphoto"/><h1 class="fontface" style="background: none;">Festivals</h1></a></button>
     </div><!-- col_8 -->
     
     <div class="col_6 col" style="float: right; margin-right: 10%;">
-        <button style="float: right;" onclick="location.href = 'viewBands.jsp'" class="mainButton"><a href="viewBands.jsp"><img style="position: absolute; left: 35px; top: -0px; width: 200px; opacity: 0.3;"  src="images/microphone.png" /><h1 class="fontface">Artists</h1></a></button>
+        <button style="float: right;" onclick="location.href = 'viewBands.jsp'" class="mainButton"><a href="viewBands.jsp"><img style="position: absolute; left: 35px; top: -0px; width: 200px; opacity: 0.3;"  src="images/microphone.png" alt="sliderPhoto"/><h1 style="background: none;" class="fontface">Artists</h1></a></button>
     </div><!-- col_8 -->
 </section>
 
 <section class="row" id="styled" style="margin-top: 0em;">
     <div class="col_16 col">
-       <span class="rotateTitle"><h1>Upcoming festivals</h1></span>
+       <span class="rotateTitle"><h1 style="background-color: white; padding: 2px 25px 2px 5px;">Upcoming festivals</h1></span>
     </div><!-- col_8 -->
     
     
@@ -68,28 +68,28 @@
 <section class="row" id="styled" style="margin-top: -3em;">
 <div id='coin-slider' style="margin: auto;">
 	<a href="img01_url" target="_blank">
-		<img src='images/rockwerchterslider.jpg' >
+		<img src='images/rockwerchterslider.jpg' alt="rockwerchter" />
 		<span>
 			Rock Werchter 2013 - 4, 5, 6 and 7th of July 
 		</span>
 	</a>
 	
 	<a href="imgN_url">
-		<img src='images/pukkelpop2013_2.PNG' >
+		<img src='images/pukkelpop2013_2.PNG' alt="Pukkelpop" />
 		<span>
 			Pukkelpop 2013 - 15, 17 and 17th and August
 		</span>
 	</a>
     
         <a href="imgN_url">
-		<img src='images/Tomorrowland-2013-banner.png' >
+		<img src='images/Tomorrowland-2013-banner.png' alt="Tomorrowland" />
 		<span>
 			Tomorrowland 2013 - 26, 27 and 28th of July
 		</span>
 	</a>
     
     <a href="imgN_url">
-		<img src='images/graspop2013.jpg' >
+		<img src='images/graspop2013.jpg' alt="Graspop" />
 		<span>
 			Graspop 2013 - 28, 29 and 30th of June 
 		</span>
@@ -97,7 +97,7 @@
     </div>
 </section>
 
-<div id="footer"><a href = 'login.jsp'>Admin login</a>&copy; 2013, all rights reserved PXL/PHL Belgium</div>
+<div id="footer">&copy; 2013, all rights reserved PXL/PHL Belgium </div>
 
 
 <script type="text/javascript">

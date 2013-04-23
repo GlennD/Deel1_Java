@@ -7,18 +7,18 @@
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/groep11_festivals?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <mapping resource="festivalOverview/Festivals.hbm.xml"/>
+    <mapping resource="festivalOverview/Bands.hbm.xml"/>
+    <mapping resource="festivalOverview/Campings.hbm.xml"/>
     <mapping resource="festivalOverview/Bandsperfestival.hbm.xml"/>
     <mapping resource="festivalOverview/Tickettypesperfestival.hbm.xml"/>
-    <mapping resource="festivalOverview/Campingsperfestival.hbm.xml"/>
     <mapping resource="festivalOverview/LoggingFestivals.hbm.xml"/>
     <mapping resource="festivalOverview/LoggingBands.hbm.xml"/>
     <mapping resource="festivalOverview/Tickets.hbm.xml"/>
     <mapping resource="festivalOverview/Faciliteiten.hbm.xml"/>
-    <mapping resource="festivalOverview/Campings.hbm.xml"/>
     <mapping resource="festivalOverview/Tickettypes.hbm.xml"/>
-    <mapping resource="festivalOverview/Bands.hbm.xml"/>
     <mapping resource="festivalOverview/Geregistreerdegebruikers.hbm.xml"/>
     <mapping resource="festivalOverview/Podia.hbm.xml"/>
     <mapping resource="festivalOverview/Facpercamp.hbm.xml"/>
+    <mapping resource ="festivalOverview/Campingsperfestival.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

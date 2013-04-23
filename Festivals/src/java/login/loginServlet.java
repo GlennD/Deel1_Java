@@ -42,7 +42,7 @@ public class loginServlet extends HttpServlet {
                 request.setAttribute("uname", uname);
                 dispatcher = request.getRequestDispatcher("admin/login_success.jsp");
                 dispatcher.forward(request,response);
-                response.sendRedirect("admin/login_succes.jsp");
+                response.sendRedirect("admin/login_success.jsp");
             } else {
                 //error login
                 dispatcher = request.getRequestDispatcher("login.jsp");

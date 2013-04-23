@@ -1,62 +1,134 @@
-        body{
-            background-color: #EFEFEF;
-            margin-bottom: 40px;
-        }
-        .oneFestival{
-            background-color: #B8C4CF;
-            width: 100%;
-            border-radius: 5px;
-            padding-left: 30px; 
-           
-        
-        }
-        
-  
-        .rotateTitle{
-            
-            display: inline-block;
-            -webkit-transform: rotate(350deg);
-            -moz-transform: rotate(350deg);
-            -o-transform: rotate(350deg);
-            writing-mode: lr-tb;
-            z-index: 999;
-            padding-top: 5em;
-            padding-bottom: 5em;
-            float: left;
-            font-family: Rockwell extra bold;
-            
-        }
-        
-      
-        
-        .mainButton{
-            width: 300px; 
-            height: 200px; 
-            border-radius: 7px; 
-            background-color: white; 
-        }
+body{
+    background-image: url(../images/bg.jpg);
+    margin-bottom: 40px;
+}
 
-        
-        #footer{
-            position: fixed;
-            right: 0px;
-            bottom: 0px;
-            width: 100%;
-            text-align: right;
-            padding: 5px;
-            background-color: rgba(14, 5, 14, 0.75);
-            opacity: 0.7;
-            -webkit-box-shadow: 0px 0px 11px rgba(14, 5, 14, 1);
--moz-box-shadow:    0px 0px 11px rgba(14, 5, 14, 1);
-box-shadow:         0px 0px 11px rgba(14, 5, 14, 1);
-            color: white;
-            font-family: "Georgia";
-            
-        }
-        
-        a{
-            
-        text-decoration: none;
-        opacity: 1;
-        color: black;
-        }
+.row h1{
+
+    font-family: 'rockwell extra bold', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    margin-top: 14px;
+    margin-bottom: 20px;
+    background-color: white;
+    display: block;
+    -webkit-transform: rotate(357deg);
+    -moz-transform: rotate(357deg);
+    -o-transform: rotate(357deg);
+    max-width: 590px;
+}
+/*
+.oneFestival{
+    background-color: #B8C4CF;
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 30px; 
+   
+
+}
+
+*/
+
+
+.rotateTitle{
+
+    display: inline-block;
+    -webkit-transform: rotate(350deg);
+    -moz-transform: rotate(350deg);
+    -o-transform: rotate(350deg);
+    writing-mode: lr-tb;
+    z-index: 999;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    float: left;
+    font-family: Rockwell extra bold;
+
+
+}
+
+
+
+.mainButton{
+    width: 300px; 
+    height: 200px; 
+    border-radius: 7px; 
+    background-color: white; 
+}
+
+
+#footer{
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    text-align: right;
+    padding: 5px;
+    background-color: rgba(14, 5, 14, 0.75);
+    opacity: 0.7;
+    -webkit-box-shadow: 0px 0px 11px rgba(14, 5, 14, 1);
+    -moz-box-shadow:    0px 0px 11px rgba(14, 5, 14, 1);
+    box-shadow:         0px 0px 11px rgba(14, 5, 14, 1);
+    color: white;
+    font-family: "Georgia";
+
+}
+
+a{
+
+    text-decoration: none;
+    opacity: 1;
+    color: black;
+}
+
+.festivalInfoSub{
+    width: 65%;
+    font-size: 20px;
+    vertical-align: middle;
+    
+    
+}
+
+.festivalInfoTitle{
+    width: 500px;
+    vertical-align: middle;
+    font-size: 30px;
+    
+}
+
+.festivalInfo tr td{
+    vertical-align: middle;
+    
+}
+.festivalInfo{
+    margin-left: 20px;
+}
+
+.borderBottomTop{
+    border-top: 3px solid #cfcfcf; 
+    border-left: 3px solid #bfbfbf; 
+    border-radius: 20px 0px 0px 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 10px;
+    
+    
+}
+
+.title{
+   
+    text-align: center; 
+    font-size: 60px; 
+    padding: 10px 10px 30px 10px;
+    -webkit-transform: rotate(362deg);
+    -moz-transform: rotate(362deg);
+    -o-transform: rotate(362deg);
+    font-family: 'rockwell extra bold', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+    background-image: url(../images/logo_festify_2.png);
+    background-size: 700px;
+    height: 130px;
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+  
+
+    
+}
