@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-apr-2013 16:18:55 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="festivalOverview.Facpercamp" table="facpercamp" catalog="groep11_festivals">
+        <composite-id name="id" class="festivalOverview.FacpercampId">
+            <key-property name="campId" type="int">
+                <column name="camp_id" />
+            </key-property>
+            <key-property name="facId" type="int">
+                <column name="fac_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="faciliteiten" class="festivalOverview.Faciliteiten" update="false" insert="false" fetch="select">
+            <column name="fac_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="campings" class="festivalOverview.Campings" update="false" insert="false" fetch="select">
+            <column name="camp_id" not-null="true" />
+        </many-to-one>
+        <property name="aantal" type="int">
+            <column name="aantal" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,62 @@
+        body{
+            background-color: #EFEFEF;
+            margin-bottom: 40px;
+        }
+        .oneFestival{
+            background-color: #B8C4CF;
+            width: 100%;
+            border-radius: 5px;
+            padding-left: 30px; 
+           
+        
+        }
+        
+  
+        .rotateTitle{
+            
+            display: inline-block;
+            -webkit-transform: rotate(350deg);
+            -moz-transform: rotate(350deg);
+            -o-transform: rotate(350deg);
+            writing-mode: lr-tb;
+            z-index: 999;
+            padding-top: 5em;
+            padding-bottom: 5em;
+            float: left;
+            font-family: Rockwell extra bold;
+            
+        }
+        
+      
+        
+        .mainButton{
+            width: 300px; 
+            height: 200px; 
+            border-radius: 7px; 
+            background-color: white; 
+        }
+
+        
+        #footer{
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            width: 100%;
+            text-align: right;
+            padding: 5px;
+            background-color: rgba(14, 5, 14, 0.75);
+            opacity: 0.7;
+            -webkit-box-shadow: 0px 0px 11px rgba(14, 5, 14, 1);
+-moz-box-shadow:    0px 0px 11px rgba(14, 5, 14, 1);
+box-shadow:         0px 0px 11px rgba(14, 5, 14, 1);
+            color: white;
+            font-family: "Georgia";
+            
+        }
+        
+        a{
+            
+        text-decoration: none;
+        opacity: 1;
+        color: black;
+        }

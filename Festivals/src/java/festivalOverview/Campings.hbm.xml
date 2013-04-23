@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-apr-2013 16:18:55 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="festivalOverview.Campings" table="campings" catalog="groep11_festivals">
+        <id name="campId" type="java.lang.Integer">
+            <column name="camp_id" />
+            <generator class="identity" />
+        </id>
+        <property name="campAdres" type="string">
+            <column name="camp_adres" not-null="true" />
+        </property>
+        <property name="campCap" type="int">
+            <column name="camp_cap" not-null="true" />
+        </property>
+        <set name="festivalses" inverse="true" table="campingsperfestival">
+            <key>
+                <column name="camp_id" not-null="true" />
+            </key>
+            <many-to-many entity-name="festivalOverview.Festivals">
+                <column name="fest_id" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="facpercamps" inverse="true">
+            <key>
+                <column name="camp_id" not-null="true" />
+            </key>
+            <one-to-many class="festivalOverview.Facpercamp" />
+        </set>
+    </class>
+</hibernate-mapping>

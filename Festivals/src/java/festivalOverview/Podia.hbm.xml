@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-apr-2013 16:18:55 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="festivalOverview.Podia" table="podia" catalog="groep11_festivals">
+        <id name="podId" type="java.lang.Integer">
+            <column name="pod_id" />
+            <generator class="identity" />
+        </id>
+        <property name="podOmschr" type="string">
+            <column name="pod_omschr" not-null="true" />
+        </property>
+        <property name="podLocatie" type="string">
+            <column name="pod_locatie" not-null="true" />
+        </property>
+        <set name="bandsperfestivals" inverse="true">
+            <key>
+                <column name="pod_id" not-null="true" />
+            </key>
+            <one-to-many class="festivalOverview.Bandsperfestival" />
+        </set>
+    </class>
+</hibernate-mapping>

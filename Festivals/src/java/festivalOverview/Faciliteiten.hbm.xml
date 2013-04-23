@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-apr-2013 16:18:55 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="festivalOverview.Faciliteiten" table="faciliteiten" catalog="groep11_festivals">
+        <id name="facId" type="java.lang.Integer">
+            <column name="fac_id" />
+            <generator class="identity" />
+        </id>
+        <property name="facOmschr" type="string">
+            <column name="fac_omschr" length="65535" not-null="true" />
+        </property>
+        <property name="facEenhprijs" type="java.lang.Double">
+            <column name="fac_eenhprijs" precision="6" />
+        </property>
+        <set name="facpercamps" inverse="true">
+            <key>
+                <column name="fac_id" not-null="true" />
+            </key>
+            <one-to-many class="festivalOverview.Facpercamp" />
+        </set>
+    </class>
+</hibernate-mapping>
