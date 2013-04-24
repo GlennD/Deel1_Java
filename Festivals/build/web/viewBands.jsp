@@ -3,15 +3,14 @@
     Created on : 20-apr-2013, 12:49:05
     Author     : Arnout
 --%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Selecteer een band</title>
 
-        <script src="js/modernizr-1.7.min.js"></script><!-- this is the javascript allowing html5 to run in older browsers -->
+        <script src="js/modernizr-1.7.min.js" type="text/javascript"></script><!-- this is the javascript allowing html5 to run in older browsers -->
 
         <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" title="html5doctor.com Reset Stylesheet" />
 
@@ -37,10 +36,10 @@
     </head>
     <body>
 
-        <a href="index.jsp"><img style="width: 100px; position: absolute; top: -50px;" src="images/Home-Button.png" /></a>
-        <a HREF="javascript:javascript:history.go(-1)"><img style="width: 100px; position: absolute; top: 55px; left: 5px; opacity: 0.4;" src="images/back-button.png" /></a>
-        <a href="viewFestivals.jsp"><img style="width: 150px; left: -20px; position: absolute; top: 100px; opacity: 0.5;" src="images/festivallogo.png" /></a>
-        <a href="viewBands.jsp"><img style="width: 100px; position: absolute; top: 210px; opacity: 0.5;" src="images/microphone.png" /></a>
+        <a href="index.jsp"><img style="width: 100px; position: absolute; top: -50px;" alt="Home" src="images/Home-Button.png" /></a>
+        <a href="javascript:javascript:history.go(-1)"><img style="width: 100px; position: absolute; top: 55px; left: 5px; opacity: 0.4;" alt="Previous"  src="images/back-button.png" /></a>
+        <a href="viewFestivals.jsp"><img style="width: 150px; left: -20px; position: absolute; top: 100px; opacity: 0.5;" alt="Festivals" src="images/festivallogo.png" /></a>
+        <a href="viewBands.jsp"><img style="width: 100px; position: absolute; top: 210px; opacity: 0.5;" alt="Artists" src="images/microphone.png" /></a>
 
         <%@ page language="java" %>
         <%@ page import="java.sql.*" %>
@@ -96,26 +95,26 @@
             }
         %>
 
-        <section class="row" id="styled" style="margin-top: 4em; ">
-            <div style="position: absolute; z-index: 30;"> <span class="rotateTitle"><h1 style="font-family: Rockwell extra bold; position: absolute; background-color: white; left: 50px;  width: 410px; top: 50px; -webkit-transform: rotate(-20deg); ">Select an artist</h1></span>
+        <section class="row" style="margin-top: 4em; ">
+            <div style="position: absolute; z-index: 30;"><h1 style="font-family: Rockwell extra bold; position: absolute; background-color: white; left: 50px;  width: 410px; top: 0px; -webkit-transform: rotate(-20deg); ">Select an artist</h1>
             </div>
             <div id='coin-slider' style="margin: auto; opacity: 0.8; position: absolute;">
-                <a href="" target="_blank">
-                    <img src='images/artists/NIN_edit.png' >
+                <a href="#" target="_blank">
+                    <img src='images/artists/NIN_edit.png' alt="Nine Inch Nails">
                     <span>
                         Nine Inch Nails
                     </span>
                 </a>
 
-                <a href="">
-                    <img src='images/artists/neil_young_edit.png' >
+                <a href="#">
+                    <img src='images/artists/neil_young_edit.png' alt="Neil Young">
                     <span>
                         Neil Young
                     </span>
                 </a>
 
-                <a href="">
-                    <img src='images/artists/the_prodigy_edit.png' >
+                <a href="#">
+                    <img src='images/artists/the_prodigy_edit.png' alt="The Prodigy">
                     <span>
                         The prodigy
                     </span>
@@ -132,12 +131,7 @@
                 int count = 0;
                 while (rs1.next()) {
             %>
-            <section class="row" id="styled" style="margin-top: 4em;">
-
-
-
-
-
+            <section class="row" style="margin-top: 4em;">
                 <a href="banddetails/banddetail.jsp?bandID=<%= rs1.getInt("band_id")%>" style="text-decoration: none; color:black;">
                     <%  if (count % 2 == 0) {
 
@@ -150,18 +144,15 @@
                                 <table class="oneFestival">
                                     <%                }
                                     %>
-                                    <tr style="border: 0px solid black; "><th colspan="2" style="text-align: left; padding: 10px 50px 0px 10px;"><h1 style="font-family: algerian; "><%=rs1.getString("band_naam")%></h1> </th></tr>
-                                    <tr style="border: 0px solid black;"><td style="width: 300px; padding: 20px 50px 0px 20px;border: 0px solid black;"><h3 style="font-family: david ;">Music-style:   </h3></td><td><%=rs1.getString("band_soortMuziek")%></td></tr>
+                                    <tr style="border: 0px solid black; "><th colspan="2" style="text-align: left; padding: 10px 50px 0px 10px;"><h1 style="font-family: algerian;"><%=rs1.getString("band_naam")%></h1></th></tr>
+                                    <tr style="border: 0px solid black;"><td style="width: 300px; padding: 20px 50px 0px 20px;border: 0px solid black;"><h3 style="font-family: david;">Music-style:   </h3></td><td><%=rs1.getString("band_soortMuziek")%></td></tr>
                                     <tr style="border: 0px solid black;"><td style="width: 300px; padding: 20px 50px 0px 20px;border: 0px solid black;"><h3  style="font-family: david;">Gigs </h3></td><td>Link naar optredens</td></tr>
-                                    <tr style="border: 0px solid black;"><td style="width: 300px; padding: 20px 50px 0px 20px;border: 0px solid black;"><h3  style="font-family: david;">Website: </h3></td><td><a href="<%=rs1.getString("band_url")%>"> <%=rs1.getString("band_url")%></a></td></tr>
-
+                                    <tr style="border: 0px solid black;"><td style="width: 300px; padding: 20px 50px 0px 20px;border: 0px solid black;"><h3  style="font-family: david;">Website: </h3></td><td><a href="<%=rs1.getString("band_url")%>"><%=rs1.getString("band_url")%></a></td></tr>
+                            </div>
                                 </table>
-                                </a> 
-
-                            </div><!-- col_16 -->
-
-
-                            </section><!-- row -->
+                       </div><!-- col_16 -->
+                </a> 
+            </section><!-- row -->
 
 
                             <%
@@ -184,7 +175,7 @@
                                 }
                             %>
 
-                            <section class="row" id="styled" style="margin-top: 4em; ">
+                            <section class="row" style="margin-top: 4em; ">
                                 <div style="text-align: center; ">
                                     <%
                                         int i = 0;

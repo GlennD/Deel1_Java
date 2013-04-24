@@ -24,8 +24,10 @@ public class loginManager {
         SessionFactory factory = new Configuration().configure().buildSessionFactory();
         session = factory.openSession();
         
+        //Controleren of wachtwoord en username overeenkomen met waardes in de database
         String query = "select gebrEmail, gebrWachtwoord from Geregistreerdegebruikers as reg where gebrEmail IN (:unameandpass) and gebrWachtwoord in (:unameandpass)";
         Query DBquery = session.createQuery(query).setParameterList("unameandpass", new String[]{uname, pass});
+        //1 voor 1 de rijen doodlopen inde database voor een match
         for (Iterator it = DBquery.iterate(); it.hasNext();) {            it.next();
             count++;
         }

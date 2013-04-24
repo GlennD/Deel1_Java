@@ -34,15 +34,18 @@ public class loginServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
+            //Username en wachtwoord ophalen uit login.jsp
             String uname = request.getParameter("uname");
             String pass = request.getParameter("pass");
 
+            //nieuwe bean loginmanager aanmaken
             loginManager manager = new loginManager();
             if (manager.isValidLogin(uname, pass)) {
+                //Controleren of de login gegevens gevalideerd werden door de loginmanager
                 request.setAttribute("uname", uname);
-                dispatcher = request.getRequestDispatcher("admin/login_success.jsp");
+                dispatcher = request.getRequestDispatcher("admin/admin_panel.jsp");
                 dispatcher.forward(request,response);
-                response.sendRedirect("admin/login_success.jsp");
+                response.sendRedirect("admin/admin_panel.jsp");
             } else {
                 //error login
                 dispatcher = request.getRequestDispatcher("login.jsp");

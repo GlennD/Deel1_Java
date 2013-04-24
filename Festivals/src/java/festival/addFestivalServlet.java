@@ -49,6 +49,7 @@ public class addFestivalServlet extends HttpServlet {
         SessionFactory factory = new Configuration().configure().buildSessionFactory();
         session = factory.openSession();
         try {
+            //Alle gegevens ophalen uit de JSP
             String festName = request.getParameter("festName");
             String festLocation = request.getParameter("festLocation");
             String date =  request.getParameter("festDate");
@@ -68,14 +69,18 @@ public class addFestivalServlet extends HttpServlet {
             
             int festDays = Integer.parseInt(request.getParameter("festDays"));
 
-            
+            //Transactie aanmaken om de gegevens te kunnen updaten met hibernate
             transaction = session.beginTransaction();
             Festivals festival = new Festivals();
+            
+            //Gegevens toevoegen aan transactie
             festival.setFestNaam(festName);
             festival.setFestLocatie(festLocation);
             festival.setFestDatum(festDate);
             festival.setFestDuur((byte) festDays);
             session.save(festival);
+            
+            //transactie uitvoeren en gegevens in database plaatsen
             transaction.commit();
 
             response.sendRedirect("login.jsp");

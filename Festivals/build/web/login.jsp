@@ -17,7 +17,8 @@
     <link rel="stylesheet" type="text/css" href="css/css3.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/custom.css" media="screen" />
     
-    <style>   
+    <style>
+        
         body
         {
             background-color: #f2f2f2;
@@ -25,20 +26,23 @@
     </style>
     
     </head>
-    <body>        
+   
+    <body>
+        
             <div class="col_8 box_shadow rounded" style="margin-left: 34%; margin-top: 15%; background-color: #00ADEF;">
-                <center><h1>LOGIN PAGE</h1></center>
+                <h1><center>LOGIN PAGE</center> </h1>
                 <form method="POST" action="${pageContext.request.contextPath}/loginServlet">
-                    <table align="center">
+
+                    <table border="0" align="center">
                         <thead>
                             <tr>
-                                <th><label for="username">Username :</label></th>
-                                <th><input name="uname" type="email" id="username" required="required" class="box_shadow" /></th>
+                                <th>Email :</th>
+                                <th><input name="uname" type="email" id="email" required="required" class="box_shadow" /></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><label for="password">Password :</label></td>
+                                <td>Password :</td>
                                 <td><input type="password" name="pass" id="password" required="required" class="box_shadow" value="" /></td>
                             </tr>
                             <tr>
@@ -47,6 +51,7 @@
                             </tr>
                         </tbody>
                     </table>
+
                 </form>
             </div>
                 

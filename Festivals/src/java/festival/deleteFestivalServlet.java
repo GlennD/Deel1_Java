@@ -4,6 +4,7 @@
  */
 package festival;
 
+import festivalOverview.HibernateUtil;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -43,15 +44,14 @@ public class deleteFestivalServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         SessionFactory factory = new Configuration().configure().buildSessionFactory();
         session = factory.openSession();
-        try {            
-        String festId = request.getParameter("id");
+        try {
+            String festID = request.getParameter("festID");
+            String hql = "delete from Festivals where fest_id = :festID";
+            Query query = session.createQuery(hql);
             
-        String hql = "delete from festivals where id = " + festId;
-        Query query = session.createQuery(hql);
-        int row = query.executeUpdate();
-
+            response.sendRedirect("login.jsp");
         } finally {
-            out.close();
+            session.close();
         }
     }
 

@@ -35,16 +35,10 @@
 
     </head>
     <body>
-        
-        <a href="index.jsp"><img style="width: 100px; position: absolute; top: -50px;" src="images/Home-Button.png" /></a>
-        <a HREF="javascript:javascript:history.go(-1)"><img style="width: 100px; position: absolute; top: 55px; left: 5px; opacity: 0.4;" src="images/back-button.png" /></a>
-        <a href="viewFestivals.jsp"><img style="width: 150px; left: -20px; position: absolute; top: 100px; opacity: 0.5;" src="images/festivallogo.png" /></a>
-        <a href="viewBands.jsp"><img style="width: 100px; position: absolute; top: 210px; opacity: 0.5;" src="images/microphone.png" /></a>
-        
-
-        
-    
-
+        <a href="index.jsp"><img style="width: 100px; position: absolute; top: -50px;" alt="Home" src="images/Home-Button.png" /></a>
+        <a href="javascript:javascript:history.go(-1)"><img style="width: 100px; position: absolute; top: 55px; left: 5px; opacity: 0.4;" alt="Previous"  src="images/back-button.png" /></a>
+        <a href="viewFestivals.jsp"><img style="width: 150px; left: -20px; position: absolute; top: 100px; opacity: 0.5;" alt="Festivals" src="images/festivallogo.png" /></a>
+        <a href="viewBands.jsp"><img style="width: 100px; position: absolute; top: 210px; opacity: 0.5;" alt="Artists" src="images/microphone.png" /></a>
 <%@ page language="java" %>
 <%@ page import="java.sql.*" %>
 <%!
@@ -104,33 +98,33 @@ System.out.println(totalRows);
 
 
 
-    <section class="row" id="styled" style="margin-top: 4em; ">
-        <div style="position: absolute; z-index: 30;"> <span class="rotateTitle"><h1 style="font-family: Rockwell extra bold; position: absolute; background-color: white; left: 50px;  width: 500px; top: 50px;">Select your festival</h1></span>
+    <section class="row" style="margin-top: 4em; ">
+        <div style="position: absolute; z-index: 30;"><h1 style="font-family: Rockwell extra bold; position: absolute; background-color: white; left: 50px;  width: 500px; top: 0px; -webkit-transform: rotate(350deg); -moz-transform: rotate(350deg); -o-transform: rotate(350deg);">Select your festival</h1>
         </div>
         <div id='coin-slider' style="margin: auto; opacity: 0.8; position: absolute;">
-	<a href="img01_url" target="_blank">
-		<img src='images/rockwerchterslider.jpg' />
+	<a href="#" target="_blank">
+		<img src='images/rockwerchterslider.jpg' alt="Rock Werchter"/>
 		<span>
 			Rock Werchter 2013 - 4, 5, 6 and 7th of July 
 		</span>
 	</a>
 	
-	<a href="imgN_url">
-		<img src='images/pukkelpop2013_2.PNG' />
+	<a href="#">
+		<img src='images/pukkelpop2013_2.PNG' alt="Pukkelpop"/>
 		<span>
 			Pukkelpop 2013 - 15, 17 and 17th and August
 		</span>
 	</a>
     
-        <a href="imgN_url">
-		<img src='images/Tomorrowland-2013-banner.png' />
+        <a href="#">
+		<img src='images/Tomorrowland-2013-banner.png' alt="Tomorrowland"/>
 		<span>
 			Tomorrowland 2013 - 26, 27 and 28th of July
 		</span>
 	</a>
     
-    <a href="imgN_url">
-		<img src='images/graspop2013.jpg' />
+    <a href="#">
+		<img src='images/graspop2013.jpg' alt="Graspop"/>
 		<span>
 			Graspop 2013 - 28, 29 and 30th of June 
 		</span>
@@ -145,17 +139,10 @@ System.out.println(totalRows);
 int count = 0;
 while(rs1.next()){
 %>
-<section class="row" id="styled" style="margin-top: 4em; ">
-
-    
-                 
-                 <div class="clear"></div>
+<section class="row" style="margin-top: 4em; ">
+    <div class="clear"></div>
     <div class="col_16 col">
-        
-  
-
-    
-       <a href="festivaldetails/festivalDetailHome.jsp?festivalID=<%= rs1.getInt("fest_id") %>" style="text-decoration: none; ">
+        <a href="festivaldetails/festivalDetailHome.jsp?festivalID=<%= rs1.getInt("fest_id") %>" style="text-decoration: none; ">
         <%  if (count%2 == 0) {
 
             %>
@@ -173,11 +160,11 @@ while(rs1.next()){
         
         
              <tr style="border: 0px solid black; "><th colspan="2" style="text-align: left; padding: 10px 50px 0px 10px;"><h1 style="font-family: algerian;"><%=rs1.getString("fest_naam")%></h1> </th></tr>
-<tr style="border: 0px solid black;"><td style="width: 300px; padding: 20px 50px 0px 20px;border: 0px solid black;"><h3 style="font-family: david ;">Location:   </h3></td><td><%=rs1.getString("fest_locatie")%></td></tr>
-<tr style="border: 0px solid black;"><td style="width: 300px; padding: 20px 50px 0px 20px;border: 0px solid black;"><h3  style="font-family: david;">Start date: </h3></td><td><%=rs1.getDate("fest_datum")%></td></tr>
-<tr style="border: 0px solid black;"><td style="width: 300px; padding: 20px 50px 0px 20px;border: 0px solid black;"><h3  style="font-family: david;">Days: </h3></td><td><%=rs1.getInt("fest_duur")%></td></tr>
-              
-        </table>
+             <tr style="border: 0px solid black;"><td style="width: 300px; padding: 20px 50px 0px 20px;border: 0px solid black;"><h3 style="font-family: david ;">Location:   </h3></td><td><%=rs1.getString("fest_locatie")%></td></tr>
+             <tr style="border: 0px solid black;"><td style="width: 300px; padding: 20px 50px 0px 20px;border: 0px solid black;"><h3  style="font-family: david;">Start date: </h3></td><td><%=rs1.getDate("fest_datum")%></td></tr>
+             <tr style="border: 0px solid black;"><td style="width: 300px; padding: 20px 50px 0px 20px;border: 0px solid black;"><h3  style="font-family: david;">Days: </h3></td><td><%=rs1.getInt("fest_duur")%></td></tr>
+          </table>
+          </div>
 </a> 
         
     </div><!-- col_16 -->
@@ -208,7 +195,7 @@ e.printStackTrace();
 }
 %>
 
-<section class="row" id="styled" style="margin-top: 4em; ">
+<section class="row" style="margin-top: 4em; ">
 <div style="text-align: center; ">
 <%
 int i=0;
