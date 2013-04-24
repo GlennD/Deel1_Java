@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-apr-2013 15:06:18 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="festivalOverview.LoggingBands" table="logging_bands" catalog="groep11_festivals">
+        <id name="loggingBandId" type="java.lang.Integer">
+            <column name="logging_band_id" />
+            <generator class="identity" />
+        </id>
+        <property name="bandId" type="int">
+            <column name="band_id" not-null="true" />
+        </property>
+        <property name="bandNaam" type="string">
+            <column name="band_naam" length="100" not-null="true" />
+        </property>
+        <property name="bandSoortMuziek" type="string">
+            <column name="band_soortMuziek" length="100" not-null="true" />
+        </property>
+        <property name="bandUrl" type="string">
+            <column name="band_url" not-null="true" />
+        </property>
+        <property name="startDate" type="timestamp">
+            <column name="StartDate" length="19" />
+        </property>
+        <property name="enddate" type="timestamp">
+            <column name="ENDDATE" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

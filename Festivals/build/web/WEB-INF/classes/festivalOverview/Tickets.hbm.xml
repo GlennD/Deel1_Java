@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-apr-2013 15:06:18 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="festivalOverview.Tickets" table="tickets" catalog="groep11_festivals">
+        <composite-id name="id" class="festivalOverview.TicketsId">
+            <key-property name="festId" type="int">
+                <column name="fest_id" />
+            </key-property>
+            <key-property name="gebrId" type="int">
+                <column name="gebr_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="tickettypes" class="festivalOverview.Tickettypes" fetch="select">
+            <column name="typ_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="festivals" class="festivalOverview.Festivals" update="false" insert="false" fetch="select">
+            <column name="fest_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="geregistreerdegebruikers" class="festivalOverview.Geregistreerdegebruikers" update="false" insert="false" fetch="select">
+            <column name="gebr_id" not-null="true" />
+        </many-to-one>
+        <property name="ticketDatum" type="date">
+            <column name="ticket_datum" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

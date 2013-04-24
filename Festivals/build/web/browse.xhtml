@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <body>
+
+        <ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+    template="./template.xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+        <ui:define name="top">
+            top
+        </ui:define>
+
+        <ui:define name="body">
+        
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="Naam:"/>
+                    <h:outputText value="#{BandsController.selected.bandNaam}" title="Naam"/>
+                    <h:outputText value="Muziek Soort"/>
+                    <h:outputText value="#{BandsController.selected.bandSoortMuziek}" title="SoortMuziek"/>
+                    <h:outputText value="Link"/>
+                    <h:outputText value="#{BandsController.bandUrl}"/>           
+                    
+                </h:panelGrid>
+                <br/>
+                <br/>
+                <h:commandLink action="#{BandsController.prepareList}" value="View All List"/>
+                <br/>
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+    </body>
+</html>
