@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Ruben
+ * @author Ruben, Wouter, Glenn, Arnout, Timo
  */
 @WebServlet(name = "loginServlet", urlPatterns = {"/loginServlet"})
 public class loginServlet extends HttpServlet {
@@ -40,14 +40,16 @@ public class loginServlet extends HttpServlet {
 
             //nieuwe bean loginmanager aanmaken
             loginManager manager = new loginManager();
+            
+            //Controleren of de login gegevens gevalideerd werden door de loginmanager
             if (manager.isValidLogin(uname, pass)) {
-                //Controleren of de login gegevens gevalideerd werden door de loginmanager
                 request.setAttribute("uname", uname);
                 dispatcher = request.getRequestDispatcher("admin/admin_panel.jsp");
                 dispatcher.forward(request,response);
                 response.sendRedirect("admin/admin_panel.jsp");
+            
+            //Foute login gegevens, redirect naar de login pagina
             } else {
-                //error login
                 dispatcher = request.getRequestDispatcher("login.jsp");
                 dispatcher.forward(request,response);
                 response.sendRedirect("login.jsp");

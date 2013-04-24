@@ -33,9 +33,9 @@
     <script type="text/javascript" src="../coin-slider/coin-slider.min.js"></script>
     <link rel="stylesheet" href="../coin-slider/coin-slider-styles.css" type="text/css" />
 
-            <link rel="stylesheet" type="text/css" href="../css/buttons/demo_buttons.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="../css/buttons/demobuttons.css" media="screen" />
         
-        <link rel="stylesheet" type="text/css" href="../css/buttons/style3_button.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../css/buttons/style3button.css" media="screen" />
             <link rel="stylesheet" type="text/css" href="../css/custom.css" media="screen" />
         
         <style type="text/css">
@@ -252,7 +252,7 @@ while(rs1.next()){
                             <br/>
                         
                             <%
-                           out.print("<a href='../banddetails/banddetail.jsp?bandID=" + rs1.getString("band_id") + "'>");
+                           out.print("<a href='../banddetails/bandDetail.jsp?bandID=" + rs1.getString("band_id") + "'>");
    
     out.print("Check out other gigs");
     out.print("</a>"); %>

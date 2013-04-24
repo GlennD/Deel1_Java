@@ -101,23 +101,23 @@
             <div id='coin-slider' style="margin: auto; opacity: 0.8; position: absolute;">
                 <a href="#" target="_blank">
                     <img src='images/artists/NIN_edit.png' alt="Nine Inch Nails">
-                    <span>
-                        Nine Inch Nails
-                    </span>
+                        <span>
+                            Nine Inch Nails
+                        </span>
                 </a>
 
                 <a href="#">
                     <img src='images/artists/neil_young_edit.png' alt="Neil Young">
-                    <span>
-                        Neil Young
-                    </span>
+                        <span>
+                            Neil Young
+                        </span>
                 </a>
 
                 <a href="#">
                     <img src='images/artists/the_prodigy_edit.png' alt="The Prodigy">
-                    <span>
-                        The prodigy
-                    </span>
+                        <span>
+                            The prodigy
+                        </span>
                 </a>
             </div>
 
@@ -132,7 +132,7 @@
                 while (rs1.next()) {
             %>
             <section class="row" style="margin-top: 4em;">
-                <a href="banddetails/banddetail.jsp?bandID=<%= rs1.getInt("band_id")%>" style="text-decoration: none; color:black;">
+                <a href="banddetails/bandDetail.jsp?bandID=<%= rs1.getInt("band_id")%>" style="text-decoration: none; color:black;">
                     <%  if (count % 2 == 0) {
 
                     %>
@@ -149,96 +149,96 @@
                                     <tr style="border: 0px solid black;"><td style="width: 300px; padding: 20px 50px 0px 20px;border: 0px solid black;"><h3  style="font-family: david;">Gigs </h3></td><td>Link naar optredens</td></tr>
                                     <tr style="border: 0px solid black;"><td style="width: 300px; padding: 20px 50px 0px 20px;border: 0px solid black;"><h3  style="font-family: david;">Website: </h3></td><td><a href="<%=rs1.getString("band_url")%>"><%=rs1.getString("band_url")%></a></td></tr>
                             </div>
-                                </table>
-                       </div><!-- col_16 -->
+                        </table>
+                    </div><!-- col_16 -->
                 </a> 
             </section><!-- row -->
 
 
-                            <%
-                                    count++;
+            <%
+                    count++;
 
-                                }
-                            %>
+                }
+            %>
 
-                            <%
-                                try {
-                                    if (totalRows < (iPageNo + showRows)) {
-                                        endResult = totalRows;
-                                    } else {
-                                        endResult = (iPageNo + showRows);
-                                    }
-                                    startResult = (iPageNo + 1);
-                                    totalPages = ((int) (Math.ceil((double) totalRows / showRows)));
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
-                            %>
+            <%
+                try {
+                    if (totalRows < (iPageNo + showRows)) {
+                        endResult = totalRows;
+                    } else {
+                        endResult = (iPageNo + showRows);
+                    }
+                    startResult = (iPageNo + 1);
+                    totalPages = ((int) (Math.ceil((double) totalRows / showRows)));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            %>
 
-                            <section class="row" style="margin-top: 4em; ">
-                                <div style="text-align: center; ">
-                                    <%
-                                        int i = 0;
-                                        int cPage = 0;
-                                        if (totalRows != 0) {
-                                            cPage = ((int) (Math.ceil((double) endResult / (totalRecords * showRows))));
-                                            int prePageNo = (cPage * totalRecords) - ((totalRecords - 1) + totalRecords);
-                                            if ((cPage * totalRecords) - (totalRecords) > 0) {
-                                    %>
-                                    <a href="viewBands.jsp?iPageNo=<%=prePageNo%>&cPageNo=<%=prePageNo%>"> << Previous</a>
-                                    <%
-                                        }
-                                        for (i = ((cPage * totalRecords) - (totalRecords - 1)); i <= (cPage * totalRecords); i++) {
-                    if (i == ((iPageNo / showRows) + 1)) {%>
-                                    <a href="viewBands.jsp?iPageNo=<%=i%>" style="cursor: pointer;color: red; font-family: algerian; padding: 10px 20px 0px 20px; border-left: 1px solid #898F8F"><b><%=i%></b></a>
-                                            <%
-                                            } else if (i <= totalPages) {
-                                            %>
-                                    <a href="viewBands.jsp?iPageNo=<%=i%>" style="font-family: algerian; padding: 10px 20px 0px 20px; border-left: 1px solid #898F8F"><%=i%></a>
-                                    <%
-                                            }
-                                        }
-                                        if (totalPages > totalRecords && i < totalPages) {
-                                    %>
-                                    <br />
-                                    <a href="viewBands.jsp?iPageNo=<%=i%>&cPageNo=<%=i%>"> >> Next</a>
-                                    <%
-                                            }
-                                        }
-                                    %>
-                                    <br />
-                                    <b>Rijen <%=startResult%>-<%=endResult%> van <%=totalRows%> </b>
-                                </div>
+            <section class="row" style="margin-top: 4em; ">
+                <div style="text-align: center; ">
+                    <%
+                        int i = 0;
+                        int cPage = 0;
+                        if (totalRows != 0) {
+                            cPage = ((int) (Math.ceil((double) endResult / (totalRecords * showRows))));
+                            int prePageNo = (cPage * totalRecords) - ((totalRecords - 1) + totalRecords);
+                            if ((cPage * totalRecords) - (totalRecords) > 0) {
+                    %>
+                    <a href="viewBands.jsp?iPageNo=<%=prePageNo%>&cPageNo=<%=prePageNo%>"> << Previous</a>
+                    <%
+                        }
+                        for (i = ((cPage * totalRecords) - (totalRecords - 1)); i <= (cPage * totalRecords); i++) {
+                                            if (i == ((iPageNo / showRows) + 1)) {%>
+                    <a href="viewBands.jsp?iPageNo=<%=i%>" style="cursor: pointer;color: red; font-family: algerian; padding: 10px 20px 0px 20px; border-left: 1px solid #898F8F"><b><%=i%></b></a>
+                    <%
+                    } else if (i <= totalPages) {
+                    %>
+                    <a href="viewBands.jsp?iPageNo=<%=i%>" style="font-family: algerian; padding: 10px 20px 0px 20px; border-left: 1px solid #898F8F"><%=i%></a>
+                    <%
+                            }
+                        }
+                        if (totalPages > totalRecords && i < totalPages) {
+                    %>
+                    <br />
+                    <a href="viewBands.jsp?iPageNo=<%=i%>&cPageNo=<%=i%>"> >> Next</a>
+                    <%
+                            }
+                        }
+                    %>
+                    <br />
+                    <b>Rijen <%=startResult%>-<%=endResult%> van <%=totalRows%> </b>
+                </div>
 
-                            </section>
-                            </form>
-                            <div id="footer">&copy; 2013, all rights reserved PXL/PHL Belgium </div>
-                            <script type="text/javascript">
-                                $(document).ready(function() {
-                                    $('#coin-slider').coinslider({width: 800, height: 200, navigation: true, delay: 5000, opacity: 0.3});
-                                });
-                            </script>
-                            </body>
-                            </html>
-                            <%
-                                try {
-                                    if (ps1 != null) {
-                                        ps1.close();
-                                    }
-                                    if (rs1 != null) {
-                                        rs1.close();
-                                    }
+            </section>
+        </form>
+        <div id="footer">&copy; 2013, all rights reserved PXL/PHL Belgium </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#coin-slider').coinslider({width: 800, height: 200, navigation: true, delay: 5000, opacity: 0.3});
+            });
+        </script>
+    </body>
+</html>
+<%
+    try {
+        if (ps1 != null) {
+            ps1.close();
+        }
+        if (rs1 != null) {
+            rs1.close();
+        }
 
-                                    if (ps2 != null) {
-                                        ps2.close();
-                                    }
-                                    if (rs2 != null) {
-                                        rs2.close();
-                                    }
-                                    if (conn != null) {
-                                        conn.close();
-                                    }
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
-                            %>
+        if (ps2 != null) {
+            ps2.close();
+        }
+        if (rs2 != null) {
+            rs2.close();
+        }
+        if (conn != null) {
+            conn.close();
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+%>

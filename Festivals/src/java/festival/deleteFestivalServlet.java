@@ -4,7 +4,6 @@
  */
 package festival;
 
-import festivalOverview.HibernateUtil;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -21,7 +20,7 @@ import org.hibernate.classic.Session;
 
 /**
  *
- * @author Ruben
+ * @author Ruben, Wouter, Glenn, Arnout, Timo
  */
 @WebServlet(name = "deleteFestivalServlet", urlPatterns = {"/deleteFestivalServlet"})
 public class deleteFestivalServlet extends HttpServlet {
@@ -45,11 +44,18 @@ public class deleteFestivalServlet extends HttpServlet {
         SessionFactory factory = new Configuration().configure().buildSessionFactory();
         session = factory.openSession();
         try {
+            
+            //Ophalen van festivalID uit admin_panel.jsp
             String festID = request.getParameter("festID");
+            
+            //De native SQL query om het festival te verwijderen 
             String hql = "delete from Festivals where fest_id = :festID";
             Query query = session.createQuery(hql);
             
+            //Redirect na het verwijderen
             response.sendRedirect("login.jsp");
+  
+
         } finally {
             session.close();
         }

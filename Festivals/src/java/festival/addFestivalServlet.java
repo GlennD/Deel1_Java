@@ -23,7 +23,7 @@ import org.hibernate.classic.Session;
 
 /**
  *
- * @author Ruben
+ * @author Ruben, Wouter, Glenn, Arnout, Timo
  */
 @WebServlet(name = "addFestivalServlet", urlPatterns = {"/addFestivalServlet"})
 public class addFestivalServlet extends HttpServlet {

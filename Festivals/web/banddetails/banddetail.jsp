@@ -20,9 +20,9 @@
     
     <!-- general stylesheet contains some default styles, you do not need this, but it helps you keep a uniform style -->
     <link rel="stylesheet" type="text/css" href="../css/general.css" media="screen" />
-            <link rel="stylesheet" type="text/css" href="../css/buttons/demo_buttons.css" media="screen" />
+            <link rel="stylesheet" type="text/css" href="../css/buttons/demobuttons.css" media="screen" />
         
-        <link rel="stylesheet" type="text/css" href="../css/buttons/style3_button.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../css/buttons/style3button.css" media="screen" />
         
     <!-- grid's will help you keep your website appealing to your users, view 52framework.com website for documentation -->
     <link rel="stylesheet" type="text/css" href="../css/grid.css" media="screen" />
